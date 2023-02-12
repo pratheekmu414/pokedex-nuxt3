@@ -8,7 +8,7 @@
 
     <!-- Grid -->
     <div class="grid">
-      <div v-for="(item, index) in pokemons.result">
+      <div  v-for="(item, index) in pokemons.result">
         <PokemonCard :name=item?.name :imageUrl=item?.image />
       </div>
     </div>
@@ -19,7 +19,6 @@
 
 <script setup>
 import PokemonCard from '../components/pokemon-card.vue'
-
 const { data: pokemons } = await useFetch('https://pokemon-wrapper-api-pratheek.up.railway.app/pokedex')
 
 const searchPokemon= async (event) => {
@@ -50,7 +49,6 @@ const value= event?.target?.value??1;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10vh;
 }
 
 .search-bar{
@@ -64,13 +62,9 @@ const value= event?.target?.value??1;
   display: grid;
   grid-template-columns: 25vw 25vw 25vw;
   grid-gap: 5vh;
-  margin-left: 10vw;
-  margin-bottom: 10vh;
+  padding: 10vw;
 
 }
 @media (min-width: 0px) and (max-width: 750px) {
-  .chat-notification {
-    margin-left: 0vw;
-  }
 }
 </style>

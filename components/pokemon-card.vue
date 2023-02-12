@@ -1,15 +1,15 @@
 <template>
-  <div class="chat-notification">
+  <div class="pokemon-card-container">
     <img :src=imageUrl alt="image" class="pokemon-image">
     <div class="pokemon-name">
       <div>{{ name }}</div>
-    </div>
-  </div>
+    </div>  
+  </div> 
 </template>
   
 <script>
 export default {
-  props: ['name', 'imageUrl']
+    props: ["name", "imageUrl"],
 }
 </script>
 
@@ -31,10 +31,10 @@ export default {
   justify-content: center;
 }
 
-.chat-notification {
+.pokemon-card-container {
   display: flex;
-  width: 15vw;
-  height: 30vh;
+  width: 30vh;
+  height: 20vw;
   contain: content;
   border-radius: 0.5rem;
   color: white;
@@ -44,8 +44,20 @@ export default {
 }
 
 @media (min-width: 0px) and (max-width: 750px) {
-  .chat-notification {
-    width: 22vw;
+  .pokemon-card-container {
+    height: 18vh;
+    width: 18vw;
   }
+
+  .pokemon-image {
+    width: 100%;
+    height: 80%;
+    background-color: rgba(165, 225, 242, 0.3);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+
 }
 </style>
