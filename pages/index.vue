@@ -63,7 +63,6 @@ const value= event?.target?.value?.toLowerCase()??1;
   grid-template-columns: 25vw 25vw 25vw;
   grid-gap: 5vh;
   padding: 10vw;
-  height: 100vh;
 
 }
 @media (min-width: 0px) and (max-width: 750px) {
