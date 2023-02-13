@@ -13,13 +13,14 @@ export default {
     return {
       image: { 
     
-        backgroundImage: "url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjQkkG7BYTByHkxt__EC3sLLphxIXfTnTcwQ&usqp=CAU)",	
+        backgroundImage: `url(img/background.jpeg)`,	
         backgroundRepeat : "no-repeat",
         backgroundSize: "100vw 100vh",
         backgroundAttachment: "fixed",
         contain:'content',
-        
-       
+        height: "100vh",
+        overflowY:'scroll',
+        overflowX:'hidden'
       }
     };
   }
