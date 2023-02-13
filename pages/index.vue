@@ -3,7 +3,7 @@
 
     <!-- search bar -->
     <div class="search"> 
-      <input placeholder=' Search Pokemons...' class="search-bar" type="text"  v-on:input="searchPokemon" />
+      <input placeholder='  Search Pokemons by name/ pokemon id...' class="search-bar" type="text"  v-on:input="searchPokemon" />
     </div>
 
     <!-- Grid -->
@@ -48,6 +48,7 @@ const value= event?.target?.value?.toLowerCase()??1;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  font-size: 0.75rem;
 }
 
 .search-bar{
