@@ -9,7 +9,9 @@
     <!-- Grid -->
     <div class="grid">
       <div  v-for="(item, index) in pokemons.result">
+        <a v-bind:href="'/details/'+ item?.name">
         <PokemonCard :name=item?.name :imageUrl=item?.image />
+        </a>
       </div>
     </div>
 
@@ -22,7 +24,7 @@ import PokemonCard from '../components/pokemon-card.vue'
 const { data: pokemons } = await useFetch('https://pokemon-wrapper-api-pratheek.up.railway.app/pokedex')
 
 const searchPokemon= async (event) => {
-const value= event?.target?.value??1;
+const value= event?.target?.value?.toLowerCase()??1;
   const result = await $fetch(`https://pokemon-wrapper-api-pratheek.up.railway.app/pokedex?search=${value}`);
   pokemons.value = result
 };
@@ -30,9 +32,6 @@ const value= event?.target?.value??1;
 </script>
 
 <style>
-.pokedex{
-  background-color: green;
-}
 .template {
   display: flex;
   flex-direction: column;
